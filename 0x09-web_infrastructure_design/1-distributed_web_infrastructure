@@ -1,0 +1,23 @@
+For every additional element, why are you adding it?
+
+As we expand the configuration, we're incorporating additional master and slave servers. This architecture operates on an Active-Active setup for the master servers, necessitating identical configurations for each new element. This mirrors the simplicity of our previous web infrastructure. Load distribution is managed through a load balancer using a Round Robin algorithm. Furthermore, we're introducing extra servers to serve as replicas or slaves, thereby relieving the master servers by handling read queries.
+
+What distribution algorithm is your load balancer configured with and how does it work?
+
+Our load balancer utilizes a Round Robin distribution algorithm. This mechanism evenly distributes incoming queries to each server in sequence. Once the last server is reached, the algorithm cycles back to the first server. This approach creates an average load distribution of approximately 50% for both servers in the configuration.
+
+Is your load balancer enabling an Active-Active or Active-Passive setup, and can you explain the difference between both?
+
+Our load balancer is facilitating an Active-Active setup.
+
+In an Active-Active cluster, two or more nodes actively run the same services concurrently. Load balancing involves distributing tasks across these servers to prevent overload. Having multiple active servers enhances service time and process throughput.
+
+Conversely, an Active-Passive setup also involves multiple nodes, but not all nodes are simultaneously active. In this configuration, while one node is active, others remain passive, poised to become active backups in case of a primary server failure. Both setups require identical configurations for primary and failover nodes to ensure seamless transition (Villanueva, 2017).
+
+How does a database Primary-Replica (Master-Slave) cluster work?
+
+A Primary-Replica (Master-Slave) database cluster replicates data from one server (the master) to one or more additional servers (the replicas). This ensures that all users have access to the same data. Replication can be synchronous or asynchronous. In synchronous replication, data is replicated from the client server to the master server and then to all replicas before the client is notified. In asynchronous replication, data is sent to the master server first, followed by a confirmation to the client, allowing replicas to copy the data at their own pace (Lutkevich, 2020).
+
+What is the difference between the Primary node and the Replica node in terms of the application?
+
+The primary node is the authoritative source, responsible for the actual data storage and writing operations. On the other hand, replica nodes are synchronized with the primary but focus exclusively on read operations. This setup aims to enhance site reliability by preventing the primary node from becoming overwhelmed with both read and write requests during high traffic periods. By distributing the load between primary and replica nodes, system stability is maintained (Theodorus, 2020).

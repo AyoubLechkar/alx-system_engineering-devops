@@ -1,0 +1,20 @@
+What is a server:
+A server is a physical machine, virtual machine, or software program that serves or provides functionality to other programs or devices known as "clients." It acts as a central hub that processes and responds to client requests. Servers can be computers equipped with higher processing power, often located in data centers, and are capable of handling various types of tasks and services.
+
+What is the role of the domain name:
+The role of a domain name is to provide a human-readable label to represent an IP address. It allows users to access websites using easy-to-remember names rather than having to remember complex numerical IP addresses. Domain names are essential for navigation on the internet and play a vital role in locating and accessing websites.
+
+What type of DNS record is www in www.foobar.com:
+The DNS record "www" in "www.foobar.com" is a subdomain. Subdomains are used to organize and categorize different sections or services of a website. In this case, "www" is a commonly used subdomain to represent the main website or web pages of a domain.
+
+What is the role of the web server:
+The role of a web server is to store website files and content and deliver them to users' web browsers when requested. It handles HTTP requests from clients (web browsers), processes them, and sends back HTML, CSS, JavaScript, images, and other resources required to display web pages. Essentially, a web server enables users to access websites and interact with web content.
+
+What is the role of the application server:
+An application server is responsible for processing application logic and business rules. It acts as an intermediary between web browsers and databases, ensuring that dynamic content is generated and delivered to users. Application servers handle tasks such as data processing, user authentication, session management, and communication with other services.
+
+What is the role of the database:
+The role of a database is to store and organize data in a structured manner, making it easily accessible, manageable, and updatable. Different types of databases, such as relational databases, NoSQL databases, and cloud databases, offer various mechanisms for storing and retrieving data efficiently. Databases play a crucial role in managing the information required for dynamic websites and applications.
+
+What is the server using to communicate with the computer of the user requesting the website:
+The server uses the HTTP (Hypertext Transfer Protocol) to communicate with the user's computer (client) requesting the website. HTTP facilitates the transfer of resources and data, such as HTML documents, between the server and the client. The client initiates a request to the server, and the server responds with the requested resources. This data exchange allows users to access and view web pages through their web browsers.

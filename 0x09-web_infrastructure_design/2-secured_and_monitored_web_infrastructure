@@ -1,0 +1,43 @@
+For every additional element, why are you adding it?
+
+As our infrastructure expands, we're introducing additional elements to enhance security, performance, and data reliability.
+
+Firewalls: We incorporate three layers of firewalls for comprehensive security. The first firewall acts as an initial filter for incoming requests, denying unauthorized access. The second firewall is positioned on the server level to thwart potential hacking attempts based on requests. The third layer consists of circuit-level firewalls, meticulously inspecting information transactions for potential threats.
+
+SSL Certificate: By adding an SSL certificate, we secure HTTPS protocols, encrypting communication between the browser and the web server. This ensures that sensitive data, previously vulnerable to interception, remains inaccessible to unauthorized parties, bolstering the overall security of communication.
+
+What are firewalls for?
+
+Firewalls play a pivotal role in network security. They serve as a barrier between private and public networks, meticulously monitoring and controlling incoming and outgoing network traffic based on predefined security rules. This hardware or software-based mechanism analyzes data packets seeking network entry, allowing or denying access based on security criteria. Furthermore, firewalls facilitate secure remote access to private networks through authenticated channels.
+
+Why is the traffic served over HTTPS?
+
+Serving traffic over HTTPS, or HyperText Transfer Protocol Secure, is essential for data protection. HTTPS employs the secure port 443 to encrypt outgoing information, rendering it highly resistant to unauthorized interception. This encryption ensures that data exchanged between the user's browser and the web server remains confidential, safeguarding user privacy and enhancing the overall security of data transmission.
+
+What is monitoring used for?
+
+Monitoring serves as a crucial practice for quality assurance and performance enhancement. By constantly measuring and assessing key metrics, we ensure the maintenance of high-quality standards, consistency, and optimal resource performance. Monitoring assists in continuous improvement by identifying areas for enhancement.
+
+How the monitoring tool is collecting data?
+
+The monitoring process is composed of three core components:
+
+Foundation: This layer focuses on the infrastructure's lower software stack. It encompasses physical and virtual components such as servers, CPUs, and virtual machines.
+
+Software: Monitoring software analyzes the operational state of devices, including CPU usage, memory utilization, and load. It tracks various parameters to provide insights into the overall system performance.
+
+Interpretation: Collected data is transformed into meaningful metrics and visualized through graphs or data charts on a GUI dashboard. This interpretation allows for a deeper understanding of performance trends and aids in informed decision-making.
+
+Explain what to do if you want to monitor your web server QPS.
+
+To monitor your web server's Queries Per Second (QPS):
+
+Choose a Monitoring Tool: Select a monitoring tool that offers QPS tracking as part of its features.
+
+Configure Monitoring Parameters: Configure the monitoring tool to specifically track QPS metrics for your web server.
+
+Analyze Data: Monitor the QPS metrics over a period to understand usage patterns and peak periods.
+
+Scale Resources: Based on the QPS data, assess whether your current resources are sufficient to handle the demand. If the QPS consistently approaches or exceeds your server's capacity, consider scaling resources to prevent performance degradation or server overload. This might involve upgrading server hardware, optimizing code, or deploying additional servers.
+
+By consistently monitoring QPS, you can proactively manage resource allocation and ensure optimal web server performance.

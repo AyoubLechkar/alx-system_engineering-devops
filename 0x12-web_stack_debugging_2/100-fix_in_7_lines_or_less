@@ -1,0 +1,4 @@
+#!/bin/bash
+useradd -r -s /sbin/nologin nginx
+sed -i 's/user .*/user nginx;/' /etc/nginx/nginx.conf
+nginx -g 'daemon off;'

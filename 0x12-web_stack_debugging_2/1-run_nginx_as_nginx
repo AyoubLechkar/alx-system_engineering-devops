@@ -1,32 +1,7 @@
 #!/usr/bin/env bash
-
-# Backup the original Nginx configuration file
-mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
-
-# Create a custom Nginx configuration file with the necessary changes
-cat <<EOL > /etc/nginx/nginx.conf
-user nginx;
-worker_processes auto;
-error_log /var/log/nginx/error.log;
-pid /run/nginx.pid;
-include /usr/share/nginx/modules/*.conf;
-
-events {
-    worker_connections 768;
-}
-
-http {
-    server {
-        listen 8080;
-        server_name _;
-
-        location / {
-            root /var/www/html;
-            index index.html;
-        }
-    }
-}
-EOL
-
-# Start Nginx with the custom configuration
-nginx -g "daemon off;"
+# Run Nginx as Nginx
+sed -i "s/#user www-data/user ngnix/" /etc/nginx/nginx.conf
+sed -i "s/80/8080/g" /etc/nginx/sites-available/default
+chmod 644 /etc/nginx/nginx.conf
+pkill apache2
+sudo -u nginx service nginx restart

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Check if a username is provided as an argument
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <username>"
@@ -7,4 +6,4 @@ if [ $# -ne 1 ]; then
 fi
 
 # Run the 'whoami' command as the specified user
-sudo -u $1 whoami
+sudo -u "$1" whoami

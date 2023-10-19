@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Backup the original Nginx configuration file
 mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak

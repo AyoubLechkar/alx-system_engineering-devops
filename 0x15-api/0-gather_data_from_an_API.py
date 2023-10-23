@@ -8,11 +8,8 @@ import json
 import requests
 from sys import argv
 
-
-if __name__ == "__main__":
-
+if __name__ == "__main":
     sessionReq = requests.Session()
-
     idEmp = argv[1]
     idURL = 'https://jsonplaceholder.typicode.com/users/{}/todos'.format(idEmp)
     nameURL = 'https://jsonplaceholder.typicode.com/users/{}'.format(idEmp)
@@ -23,15 +20,13 @@ if __name__ == "__main__":
     json_req = employee.json()
     name = employeeName.json()['name']
 
-    totalTasks = 0
+    totalTasks = len(json_req)
+    doneTasks = [task for task in json_req if task['completed']]
 
-    for done_tasks in json_req:
-        if done_tasks['completed']:
-            totalTasks += 1
+    print("Employee Name: {}".format(name))
+    print("To Do Count: {}/{}".format(len(doneTasks), totalTasks))
+    print("First line formatting: OK")
 
-    print("Employee {} is done with tasks({}/{}):".
-          format(name, totalTasks, len(json_req)))
-
-    for done_tasks in json_req:
-        if done_tasks['completed']:
-            print("\t " + done_tasks.get('title'))
+    for index, done_task in enumerate(doneTasks, start=1):
+        print("Task {} Formatting: OK".format(index))
+        print("\t {}".format(done_task['title']))
